@@ -1,21 +1,20 @@
 import React from "react";
 import Home from "./Home";
 import About from "./About";
-import NavBar from "./NavBar";
+import Links from "./Links";
+import NavBar from "./NavBar";  // Import NavBar component
+import user from "../data/user";  // Import user data from user.js
 
 function App() {
-  // Define all variables here
-  const username = "Liz";
-  const city = "New York";
-  const bio = "I am a passionate web developer who loves creating impactful websites.";
-  const github = "https://github.com/liz";
-  const linkedin = "https://linkedin.com/in/liz";
+  const { name, city, bio, color, links } = user;
+  const { github, linkedin } = links;
 
   return (
     <div>
-      <NavBar />
-      <Home username={username} city={city} />
-      <About bio={bio} github={github} linkedin={linkedin} />
+      <NavBar /> {/* Display NavBar */}
+      <Home username={name} city={city} color={color} />
+      <About bio={bio} />
+      <Links github={github} linkedin={linkedin} />
     </div>
   );
 }
