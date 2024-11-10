@@ -1,6 +1,7 @@
 import React from "react";
 import Home from "./Home";
 import About from "./About";
+import NavBar from "./NavBar";
 
 function App() {
   // Define all variables here
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <div>
+      <NavBar />
       <Home username={username} city={city} />
       <About bio={bio} github={github} linkedin={linkedin} />
     </div>
